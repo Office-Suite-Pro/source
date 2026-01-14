@@ -1,0 +1,39 @@
+{
+  "name": "Document",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Document title"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "document",
+        "spreadsheet",
+        "presentation"
+      ],
+      "description": "Type of document"
+    },
+    "content": {
+      "type": "string",
+      "description": "Document content (HTML for docs, JSON for sheets/presentations)"
+    },
+    "last_modified": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "is_favorite": {
+      "type": "boolean",
+      "default": false
+    },
+    "folder": {
+      "type": "string",
+      "default": "root"
+    }
+  },
+  "required": [
+    "title",
+    "type"
+  ]
+}

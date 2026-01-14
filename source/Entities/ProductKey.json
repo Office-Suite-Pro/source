@@ -1,0 +1,25 @@
+{
+  "name": "ProductKey",
+  "type": "object",
+  "properties": {
+    "key": {
+      "type": "string",
+      "description": "The product key"
+    },
+    "is_used": {
+      "type": "boolean",
+      "default": false
+    },
+    "used_by": {
+      "type": "string",
+      "description": "Email of user who used this key"
+    },
+    "used_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "key"
+  ]
+}
